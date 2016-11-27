@@ -32,16 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToggleState = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uniqueidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.swversionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lightBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.synchronizeLightsGrid = new System.ComponentModel.BackgroundWorker();
             this.performLightActions = new System.ComponentModel.BackgroundWorker();
@@ -56,6 +46,17 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.stateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brightness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToggleState = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniqueidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.swversionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightBindingSource)).BeginInit();
@@ -90,6 +91,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.color,
+            this.brightness,
             this.idDataGridViewTextBoxColumn,
             this.stateDataGridViewTextBoxColumn,
             this.ToggleState,
@@ -108,84 +110,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
-            // 
-            // color
-            // 
-            this.color.DataPropertyName = "color";
-            this.color.HeaderText = "color";
-            this.color.Name = "color";
-            this.color.ReadOnly = true;
-            this.color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.color.Width = 120;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stateDataGridViewTextBoxColumn
-            // 
-            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
-            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ToggleState
-            // 
-            this.ToggleState.HeaderText = "Toggle state";
-            this.ToggleState.Name = "ToggleState";
-            this.ToggleState.ReadOnly = true;
-            this.ToggleState.Text = "Toggle state";
-            this.ToggleState.UseColumnTextForButtonValue = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelidDataGridViewTextBoxColumn
-            // 
-            this.modelidDataGridViewTextBoxColumn.DataPropertyName = "modelid";
-            this.modelidDataGridViewTextBoxColumn.HeaderText = "modelid";
-            this.modelidDataGridViewTextBoxColumn.Name = "modelidDataGridViewTextBoxColumn";
-            this.modelidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelidDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // manufacturernameDataGridViewTextBoxColumn
-            // 
-            this.manufacturernameDataGridViewTextBoxColumn.DataPropertyName = "manufacturername";
-            this.manufacturernameDataGridViewTextBoxColumn.HeaderText = "manufacturername";
-            this.manufacturernameDataGridViewTextBoxColumn.Name = "manufacturernameDataGridViewTextBoxColumn";
-            this.manufacturernameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // uniqueidDataGridViewTextBoxColumn
-            // 
-            this.uniqueidDataGridViewTextBoxColumn.DataPropertyName = "uniqueid";
-            this.uniqueidDataGridViewTextBoxColumn.HeaderText = "uniqueid";
-            this.uniqueidDataGridViewTextBoxColumn.Name = "uniqueidDataGridViewTextBoxColumn";
-            this.uniqueidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uniqueidDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // swversionDataGridViewTextBoxColumn
-            // 
-            this.swversionDataGridViewTextBoxColumn.DataPropertyName = "swversion";
-            this.swversionDataGridViewTextBoxColumn.HeaderText = "swversion";
-            this.swversionDataGridViewTextBoxColumn.Name = "swversionDataGridViewTextBoxColumn";
-            this.swversionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.swversionDataGridViewTextBoxColumn.Width = 120;
             // 
             // lightBindingSource
             // 
@@ -281,6 +205,91 @@
             // 
             this.stateBindingSource.DataSource = typeof(HueLightsApi.State);
             // 
+            // color
+            // 
+            this.color.DataPropertyName = "color";
+            this.color.HeaderText = "color";
+            this.color.Name = "color";
+            this.color.ReadOnly = true;
+            this.color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.color.Width = 120;
+            // 
+            // brightness
+            // 
+            this.brightness.DataPropertyName = "brightness";
+            this.brightness.HeaderText = "brightness";
+            this.brightness.Name = "brightness";
+            this.brightness.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // stateDataGridViewTextBoxColumn
+            // 
+            this.stateDataGridViewTextBoxColumn.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn.Name = "stateDataGridViewTextBoxColumn";
+            this.stateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ToggleState
+            // 
+            this.ToggleState.HeaderText = "Toggle state";
+            this.ToggleState.Name = "ToggleState";
+            this.ToggleState.ReadOnly = true;
+            this.ToggleState.Text = "Toggle state";
+            this.ToggleState.UseColumnTextForButtonValue = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelidDataGridViewTextBoxColumn
+            // 
+            this.modelidDataGridViewTextBoxColumn.DataPropertyName = "modelid";
+            this.modelidDataGridViewTextBoxColumn.HeaderText = "modelid";
+            this.modelidDataGridViewTextBoxColumn.Name = "modelidDataGridViewTextBoxColumn";
+            this.modelidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelidDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // manufacturernameDataGridViewTextBoxColumn
+            // 
+            this.manufacturernameDataGridViewTextBoxColumn.DataPropertyName = "manufacturername";
+            this.manufacturernameDataGridViewTextBoxColumn.HeaderText = "manufacturername";
+            this.manufacturernameDataGridViewTextBoxColumn.Name = "manufacturernameDataGridViewTextBoxColumn";
+            this.manufacturernameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uniqueidDataGridViewTextBoxColumn
+            // 
+            this.uniqueidDataGridViewTextBoxColumn.DataPropertyName = "uniqueid";
+            this.uniqueidDataGridViewTextBoxColumn.HeaderText = "uniqueid";
+            this.uniqueidDataGridViewTextBoxColumn.Name = "uniqueidDataGridViewTextBoxColumn";
+            this.uniqueidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uniqueidDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // swversionDataGridViewTextBoxColumn
+            // 
+            this.swversionDataGridViewTextBoxColumn.DataPropertyName = "swversion";
+            this.swversionDataGridViewTextBoxColumn.HeaderText = "swversion";
+            this.swversionDataGridViewTextBoxColumn.Name = "swversionDataGridViewTextBoxColumn";
+            this.swversionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.swversionDataGridViewTextBoxColumn.Width = 120;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +328,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brightness;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn ToggleState;
