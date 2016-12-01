@@ -100,10 +100,10 @@ namespace HueLightsControl
         {
             //_hue.SetColor(new Light() {id="4"}, new RgbColor(11,12,13));
 
-            var light = new Light() { id = "4" };
-            _hue.TurnOn(light);
-            _hue.SetColor(light, new RgbColor(255, 95, 48));
-            
+            //var light = new Light() { id = "4" };
+            //_hue.TurnOn(light);
+            //_hue.SetColor(light, new RgbColor(255, 95, 48));
+            _hue.PopulateGroupsList();
         }
     }
     //class ColoredDataGridViewTextBoxCell : DataGridViewTextBoxCell

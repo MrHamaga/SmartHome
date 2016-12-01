@@ -1,21 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
 
 namespace HueLightsApi
 {
     public class Light
     {
-        private JToken item;
-
-        public Light(JToken item)
-        {
-            this.item = item;
-        }
-
         public Light()
         {
         }

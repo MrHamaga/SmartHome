@@ -34,6 +34,8 @@ namespace HueLightsApi
 //        public bool LightsStateChanged { get; set; }
 
         List<Light> _lights = new List<Light>();
+        private List<Group> _groups;
+
         public List<Light> Lights
         {
             get
@@ -60,6 +62,26 @@ namespace HueLightsApi
             Console.WriteLine(resp.Content);
         }
 
+        private void PopulateGroupsList(IRestResponse resp)
+        {
+            if (resp.StatusCode == HttpStatusCode.OK)
+            {
+                _groups = new List<Group>();
+                var json = JsonConvert.DeserializeObject<JObject>(resp.Content);
+                foreach (var item in json.AsJEnumerable())
+                {
+                    var group = JsonConvert.DeserializeObject<Group>(item.First().ToString());
+                    group.id = item.Path;
+                    _groups.Add(group);
+                }
+            }
+            else
+            {
+                LogResponse(resp);
+                throw new Exception(string.Format("Statuscode was {0} with the description {1}", resp.StatusCode, resp.StatusDescription));
+            }
+        }
+
         private void PopulateLightList(IRestResponse resp) {
            
             if (resp.StatusCode == HttpStatusCode.OK)
@@ -78,6 +100,15 @@ namespace HueLightsApi
                 LogResponse(resp);
                 throw new Exception(string.Format("Statuscode was {0} with the description {1}", resp.StatusCode, resp.StatusDescription));
             }
+        }
+        public void PopulateGroupsList()
+        {
+            var client = new RestClient(_baseGroupsUri);
+            var request = new RestRequest();
+
+            client.ExecuteAsync(request, response => {
+                PopulateGroupsList(response);
+            });
         }
 
         public void PopulateLightList()
