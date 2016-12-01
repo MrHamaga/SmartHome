@@ -46,13 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AVTransportService.cs" />
+    <Compile Include="Requests\GetPositionInfoRequest.cs" />
     <Compile Include="Helpers\ConfigurationHelper.cs" />
+    <Compile Include="IAVTransportService.cs" />
+    <Compile Include="Requests\PauseRequest.cs" />
+    <Compile Include="Requests\PlayRequest.cs" />
+    <Compile Include="Requests\SeekRequest.cs" />
     <Compile Include="SonosRequestHelper.cs" />
-    <Compile Include="SonosSoapClient.cs" />
+    <Compile Include="SonosClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

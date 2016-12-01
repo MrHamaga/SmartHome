@@ -5,7 +5,7 @@ namespace SonosApi.Helpers
 {
     public class ConfigurationHelper
     {
-        internal static string GetSonosIp()
+        public static string GetSonosIp()
         {
             return GetStringFromConfiguration("SonosIp", false);
         }

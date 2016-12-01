@@ -4,10 +4,10 @@ namespace SonosApi
 {
     public class SonosRequestHelper
     {
-        SonosSoapClient s;
+        SonosClient s;
         public SonosRequestHelper()
         {
-            s = new SonosSoapClient(string.Format("http://{0}/MediaRenderer/AVTransport/Control", ConfigurationHelper.GetSonosIp()));
+            s = new SonosClient(ConfigurationHelper.GetSonosIp());
         }
 
         public void Pause()
