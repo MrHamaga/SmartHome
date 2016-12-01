@@ -35,7 +35,7 @@ namespace SonosApi
                     throw;
                 }
 
-             //((IClientChannel)service).Close();
+             ((IClientChannel)service).Close();
             }
         }
 
