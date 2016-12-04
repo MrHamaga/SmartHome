@@ -5,19 +5,22 @@ namespace SonosApi
 {
     public class SonosClient
     {
-        private string _baseAddress;
-
+        private string _ip;
         public SonosClient(string sonosIp)
         {
-            _baseAddress = string.Format("http://{0}:1400/MediaRenderer/AVTransport/Control", sonosIp);
+            _ip = sonosIp;
+            
         }
-
-        private IAVTransportService GetClient() {
-            return new AVTransportService(_baseAddress);
+        private IContentDirectoryService GetContentDirectoryClient()
+        {
+            return new ContentDirectoryService(string.Format("http://{0}:1400/MediaServer/ContentDirectory/Control", _ip));
+        }
+        private IAVTransportService GetAvTransportClient() {
+            return new AVTransportService(string.Format("http://{0}:1400/MediaRenderer/AVTransport/Control", _ip));
         }
         public void Seek(int instanceId)
         {
-            using (var client = GetClient())
+            using (var client = GetAvTransportClient())
             {
                 try
                 {
@@ -37,7 +40,7 @@ namespace SonosApi
         }
         public void GetPositionInfo(int instanceId)
         {
-            using (var client = GetClient())
+            using (var client = GetAvTransportClient())
             {
                 try
                 {
@@ -52,9 +55,25 @@ namespace SonosApi
                 }
             }
         }
+
+        public void Browse(string objectId)
+        {
+            using (var client = GetContentDirectoryClient())
+            {
+              var result = client.Browse(new BrowseRequest {
+                    BrowseFlag = BrowseFlag.BrowseDirectChildren,
+                    Filter = "dc:title,res,dc:creator,upnp:artist,upnp:album,upnp:albumArtURI",
+                    ObjectID = objectId,
+                    RequestedCount = 100,
+                    SortCriteria = "",
+                    StartingIndex = 0
+                });
+            }
+        }
+
         public void Play(int instanceId)
         {
-            using (var client = GetClient())
+            using (var client = GetAvTransportClient())
             {
                 try
                 {
@@ -73,7 +92,7 @@ namespace SonosApi
 
         public void Pause(int instanceId)
         {
-            using (var client = GetClient())
+            using (var client = GetAvTransportClient())
             {
                 try
                 {

@@ -41,5 +41,13 @@ namespace SonosControl
         {
             _sonos.GetPositionInfo(0);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            _sonos.Browse("FV:0");
+            _sonos.Browse("FV:1");
+            _sonos.Browse("FV:2");
+            _sonos.Browse("Q:0");
+        }
     }
 }

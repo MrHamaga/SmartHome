@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AVTransportService.cs" />
+    <Compile Include="ContentDirectoryService.cs" />
+    <Compile Include="IContentDirectoryService.cs" />
+    <Compile Include="Requests\Browse.cs" />
     <Compile Include="Requests\GetPositionInfoRequest.cs" />
     <Compile Include="Helpers\ConfigurationHelper.cs" />
     <Compile Include="IAVTransportService.cs" />
