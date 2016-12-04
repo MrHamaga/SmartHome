@@ -130,6 +130,10 @@ namespace HueLightsApi
             SetState(light.id, false);
         }
 
+        public void Blink(Light light) {
+            ExecuteRequest(string.Format("{0}/{1}/state", _baseLightsUri, light.id), new { alert = "lselect" });
+        }
+
         public void TurnOn(Light light)
         {
             SetState(light.id, true);
