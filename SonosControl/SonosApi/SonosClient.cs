@@ -56,6 +56,42 @@ namespace SonosApi
             }
         }
 
+        public void Previous(int instanceId)
+        {
+            using (var client = GetAvTransportClient())
+            {
+                try
+                {
+                    client.Previous(new PreviousRequest
+                    {
+                        InstanceID = instanceId,
+                    });
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+            }
+        }
+
+        public void Next(int instanceId)
+        {
+            using (var client = GetAvTransportClient())
+            {
+                try
+                {
+                    client.Next(new NextRequest
+                    {
+                        InstanceID = instanceId,
+                    });
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+            }
+        }
+
         public void Browse(string objectId)
         {
             using (var client = GetContentDirectoryClient())

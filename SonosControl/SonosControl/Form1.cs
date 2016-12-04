@@ -49,5 +49,15 @@ namespace SonosControl
             _sonos.Browse("FV:2");
             _sonos.Browse("Q:0");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            _sonos.Next(0);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            _sonos.Previous(0);
+        }
     }
 }

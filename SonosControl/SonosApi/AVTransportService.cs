@@ -29,6 +29,15 @@ namespace SonosApi
         {
             service.Play(request);
         }
+        public void Next(NextRequest request)
+        {
+            service.Next(request);
+        }
+        public void Previous(PreviousRequest request)
+        {
+            service.Previous(request);
+        }
+
         public void Dispose()
         {
             ((IClientChannel)service).Close();
@@ -39,9 +48,10 @@ namespace SonosApi
             service.Seek(request);
         }
 
-        public void GetPositionInfo(GetPositionInfoRequest request)
+        public GetPositionInfoResponse GetPositionInfo(GetPositionInfoRequest request)
         {
-            service.GetPositionInfo(request);
+            GetPositionInfoResponse resp = service.GetPositionInfo(request);
+            return resp;
         }
     }
 

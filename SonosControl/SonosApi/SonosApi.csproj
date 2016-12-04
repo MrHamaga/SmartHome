@@ -53,7 +53,9 @@
     <Compile Include="Requests\GetPositionInfoRequest.cs" />
     <Compile Include="Helpers\ConfigurationHelper.cs" />
     <Compile Include="IAVTransportService.cs" />
+    <Compile Include="Requests\PreviousRequest.cs" />
     <Compile Include="Requests\PauseRequest.cs" />
+    <Compile Include="Requests\NextRequest.cs" />
     <Compile Include="Requests\PlayRequest.cs" />
     <Compile Include="Requests\SeekRequest.cs" />
     <Compile Include="SonosRequestHelper.cs" />
