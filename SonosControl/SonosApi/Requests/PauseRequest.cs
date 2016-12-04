@@ -12,37 +12,16 @@ namespace SonosApi.Requests
 }
 /*
  
-     <s:Envelope
-    xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
-    s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <s:Envelope
+    xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
     <s:Body>
-        <u:GetPositionInfo
-            xmlns:u="urn:schemas-upnp-org:service:AVTransport:1">
-            <InstanceID>
+        <Pause
+            xmlns="urn:schemas-upnp-org:service:AVTransport:1">
+            <InstanceID
+                xmlns="">
                 0
                 </InstanceID>
-            </u:GetPositionInfo>
+            </Pause>
         </s:Body>
     </s:Envelope>
-
-
      */
-//<s:Envelope
-//    xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
-//    s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-//    <s:Body>
-//        <u:Seek
-//            xmlns:u="urn:schemas-upnp-org:service:AVTransport:1">
-//            <InstanceID>
-//                0
-//                </InstanceID>
-//            <Unit>
-//                TRACK_NR
-//                </Unit>
-//            <Target>
-//                2
-//                </Target>
-//            </u:Seek>
-//        </s:Body>
-//    </s:Envelope>
-
